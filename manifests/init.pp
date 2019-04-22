@@ -240,6 +240,9 @@ class ssh (
           $default_sshd_acceptenv                  = true
           $default_sshd_config_subsystem_sftp      = '/usr/lib/openssh/sftp-server'
         }
+        default: {
+          fail('ssh module supports Debian release 7 and 9')
+        }
       }
     }
     'Solaris': {
