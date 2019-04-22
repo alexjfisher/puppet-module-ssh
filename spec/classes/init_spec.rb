@@ -56,7 +56,7 @@ describe 'ssh' do
       :sshd_service_name      => 'ssh',
       :sshd_service_hasstatus => true,
       :sshd_config_fixture    => 'sshd_config_debian9',
-      :ssh_config_fixture     => 'ssh_config_debian',
+      :ssh_config_fixture     => 'ssh_config_debian9',
     },
     'RedHat-5' => {
       :architecture           => 'x86_64',
