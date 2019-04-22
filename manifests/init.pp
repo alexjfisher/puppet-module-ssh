@@ -232,6 +232,7 @@ class ssh (
           $default_sshd_config_permittunnel        = 'no'
         }
         '9': {
+          $default_sshd_config_mode                = '0600'
           $default_sshd_use_pam                    = 'yes'
           $default_ssh_config_forward_x11_trusted  = 'yes'
           $sshd_config_challenge_resp_auth         = 'no'
