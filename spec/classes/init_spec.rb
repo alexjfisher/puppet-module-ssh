@@ -38,7 +38,7 @@ describe 'ssh' do
       :operatingsystemrelease    => '7',
       :os => {
         :release => {
-          major => '7',
+          :major => '7',
         },
       },
       :ssh_version               => 'OpenSSH_6.0p1',
@@ -56,7 +56,7 @@ describe 'ssh' do
       :operatingsystemrelease    => '9',
       :os => {
         :release => {
-          major => '9',
+          :major => '9',
         },
       },
       :ssh_version               => 'OpenSSH_7.4p1',
