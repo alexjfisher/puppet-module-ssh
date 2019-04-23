@@ -36,7 +36,11 @@ describe 'ssh' do
       :architecture              => 'x86_64',
       :osfamily                  => 'Debian',
       :operatingsystemrelease    => '7',
-      :os.release.major          => '7',
+      :os => {
+        :release => {
+          major => '7',
+        },
+      },
       :ssh_version               => 'OpenSSH_6.0p1',
       :ssh_version_numeric       => '6.0',
       :ssh_packages              => ['openssh-server', 'openssh-client'],
@@ -50,7 +54,11 @@ describe 'ssh' do
       :architecture              => 'x86_64',
       :osfamily                  => 'Debian',
       :operatingsystemrelease    => '9',
-      :os.release.major          => '9',
+      :os => {
+        :release => {
+          major => '9',
+        },
+      },
       :ssh_version               => 'OpenSSH_7.4p1',
       :ssh_version_numeric       => '7.4',
       :ssh_packages              => ['openssh-server', 'openssh-client'],
