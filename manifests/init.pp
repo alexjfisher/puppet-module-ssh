@@ -209,7 +209,17 @@ class ssh (
       $default_service_name                    = 'ssh'
 
       case $::facts['os']['release']['major'] {
-        '7': {
+        '9': {
+          $default_sshd_config_mode                = '0600'
+          $default_sshd_use_pam                    = 'yes'
+          $default_ssh_config_forward_x11_trusted  = 'yes'
+          $sshd_config_challenge_resp_auth         = 'no'
+          $sshd_config_print_motd                  = 'no'
+          $default_sshd_acceptenv                  = true
+          $default_sshd_config_subsystem_sftp      = '/usr/lib/openssh/sftp-server'
+        }
+        default: {
+          # this is debian 7 conf file and suppose to work with debian 8
           $default_sshd_config_hostkey             = [ '/etc/ssh/ssh_host_rsa_key' ]
           $default_ssh_config_hash_known_hosts     = 'no'
           $default_sshd_config_xauth_location      = '/usr/bin/xauth'
@@ -230,18 +240,6 @@ class ssh (
           $default_sshd_addressfamily              = 'any'
           $default_sshd_config_tcp_keepalive       = 'yes'
           $default_sshd_config_permittunnel        = 'no'
-        }
-        '9': {
-          $default_sshd_config_mode                = '0600'
-          $default_sshd_use_pam                    = 'yes'
-          $default_ssh_config_forward_x11_trusted  = 'yes'
-          $sshd_config_challenge_resp_auth         = 'no'
-          $sshd_config_print_motd                  = 'no'
-          $default_sshd_acceptenv                  = true
-          $default_sshd_config_subsystem_sftp      = '/usr/lib/openssh/sftp-server'
-        }
-        default: {
-          fail('ssh module supports Debian release 7 and 9')
         }
       }
     }
