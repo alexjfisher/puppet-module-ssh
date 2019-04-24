@@ -36,18 +36,14 @@ describe 'ssh' do
       :architecture              => 'x86_64',
       :osfamily                  => 'Debian',
       :operatingsystemrelease    => '7',
-      :facts_hash => {
-               :osfamily => 'Debian',
-               :operatingsystem => 'Debian',
-               os => {
-                 'name' => 'Debian',
-                 'family' => 'Debian',
-                 'release' => {
-                   'full'  => '7.0',
-                   'major' => '7',
-                   'minor' => '0'
-                 },
-               },
+      :os => {
+        'name' => 'Debian',
+        'family' => 'Debian',
+        'release' => {
+          'full'  => '7.0',
+          'major' => '7',
+          'minor' => '0'
+        },
       },
       :ssh_version               => 'OpenSSH_6.0p1',
       :ssh_version_numeric       => '6.0',
@@ -62,18 +58,14 @@ describe 'ssh' do
       :architecture              => 'x86_64',
       :osfamily                  => 'Debian',
       :operatingsystemrelease    => '9',
-      :facts_hash => {
-               :osfamily => 'Debian',
-               :operatingsystem => 'Debian',
-               :os => {
-                 'name' => 'Debian',
-                 'family' => 'Debian',
-                 'release' => {
-                   'full'  => '9.0',
-                   'major' => '9',
-                   'minor' => '0'
-                 },
-               },
+      :os => {
+        'name' => 'Debian',
+        'family' => 'Debian',
+        'release' => {
+          'full'  => '9.0',
+          'major' => '9',
+          'minor' => '0'
+        },
       },
       :ssh_version               => 'OpenSSH_7.4p1',
       :ssh_version_numeric       => '7.4',
