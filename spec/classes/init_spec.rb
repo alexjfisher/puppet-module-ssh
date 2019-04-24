@@ -39,7 +39,7 @@ describe 'ssh' do
       :facts_hash => {
                :osfamily => 'Debian',
                :operatingsystem => 'Debian',
-               :os => {
+               os => {
                  'name' => 'Debian',
                  'family' => 'Debian',
                  'release' => {
